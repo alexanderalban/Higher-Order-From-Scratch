@@ -2,6 +2,8 @@
 // .map performs a function on each item in an array, and returns a new array with the results.
 // for this .map, let's add 2 to each item in the original array, and return our new array
 
+console.log(".map function from scratch!")
+
 let firstMapArr = [3, 4, 235, 6, 12];
 
 const addTwo = (array) => {
@@ -9,8 +11,9 @@ const addTwo = (array) => {
     for (let i = 0; i < array.length; i++) {
         let mathResult = array[i] + 2;
         addTwoArr.push(mathResult);
-        console.log(array);
     }
+    console.log(addTwoArr);
+    return addTwoArr;
 };
 
 addTwo(firstMapArr);
@@ -23,6 +26,8 @@ addTwo(firstMapArr);
 // total amount of all the food orders
 
 //first we're going to need the orders:
+
+console.log(".reduce from scratch!");
 
 class FoodOrder {
     constructor(name, food, amount) {
@@ -44,6 +49,7 @@ const reduceFoodAmount = (array) => {
     for (i = 0; i < array.length; i++) {
         total += array[i].amount;
     }
+    console.log(total);
     return total;
 }
 
@@ -53,18 +59,21 @@ reduceFoodAmount(foodArray);
 // .filter returns an array of values that pass a test that you set
 // it does this by taking in an array, and a function that returns an array of only the items that
 // return true
-// for this array, we can return only the numbers that are even
+// for this array, we can return only the numbers that are less than 6
+
+console.log(".filter from scratch!")
 
 let numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const evenFilter = (array) => {
-    let evenArray = [];
+    let lessThanArray = [];
     for (i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            evenArray.push(array[i])
+        if (array[i] < 6 === true) {
+            lessThanArray.push(array[i])
         }
     }
-    return evenArray;
+    console.log(lessThanArray);
+    return lessThanArray;
 }
 
 evenFilter(numberArray);
